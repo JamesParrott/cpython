@@ -559,7 +559,7 @@ def _lru_cache_wrapper(user_function, maxsize, typed, _CacheInfo, initial_data):
 
         def cache_put(returned_value, args, kwds):
             # It could be argued this should raise an error.
-            # But making it a no-op makes it is possible to
+            # But making it a no-op makes it possible to
             # set maxsize=0 to disable the cache for
             # experimentation and debugging.
             pass
