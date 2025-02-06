@@ -560,7 +560,7 @@ def _lru_cache_wrapper(user_function, maxsize, typed, _CacheInfo, initial_data):
         def cache_put(returned_value, args, kwds):
             # It could be argued this should raise an error.
             # But making it a no-op makes it is possible to
-            # set maxsize=0 to disable the cache for 
+            # set maxsize=0 to disable the cache for
             # experimentation and debugging.
             pass
 
@@ -598,7 +598,7 @@ def _lru_cache_wrapper(user_function, maxsize, typed, _CacheInfo, initial_data):
 
     else:
         def cache_put(returned_value, args, kwds):
-            # Put returned_value in the finite cache, expiring the 
+            # Put returned_value in the finite cache, expiring the
             # LRU entry and updating the LRU order.
             nonlocal root, hits, misses, full
 
@@ -662,7 +662,7 @@ def _lru_cache_wrapper(user_function, maxsize, typed, _CacheInfo, initial_data):
             cache_put(result, args, kwds, strict = False)
             return result
 
-    
+
     for [(args, kwds), returned_value] in initial_data:
         cache_put(
                 returned_value=returned_value,
