@@ -542,7 +542,7 @@ def _lru_cache_wrapper(user_function, maxsize, typed, _CacheInfo, initial_data):
     PREV, NEXT, KEY, RESULT = 0, 1, 2, 3   # names for the link fields
 
     # Is this better expressed as list[tuple[ParamSpec, Any]] ?
-    # initial_data: list[tuple[tuple[Any,dict[str,Any]],Any]
+    # initial_data: list[tuple[tuple[Any,dict[str,Any]],Any]]
     if initial_data is None:
         initial_data = []
 
