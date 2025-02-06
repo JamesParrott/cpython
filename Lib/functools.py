@@ -599,8 +599,8 @@ def _lru_cache_wrapper(user_function, maxsize, typed, _CacheInfo, initial_data):
     else:
         def cache_put(returned_value, args, kwds):
             # Put returned_value in the finite cache, expiring the
-            # LRU entry and updating the LRU order.
-            nonlocal root, hits, misses, full
+            # LRU item if needs be, and updating the LRU order.
+            nonlocal root, full
 
 
             with lock:
